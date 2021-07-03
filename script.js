@@ -1,3 +1,4 @@
+
 var date = document.getElementById("date");
 date.innerHTML = new Date().toLocaleDateString();
 
@@ -11,7 +12,7 @@ var state = {
 
 window.addEventListener("scroll", () => {
   if (
-    window.pageYOffset + window.innerHeight >=
+    window.scrollY + window.innerHeight >=
     document.documentElement.scrollHeight
   ) {
     showLoading();
@@ -19,8 +20,13 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("touchmove", () => {
-   showLoading();
-});
+    if (
+      window.pageYOffset + window.innerHeight >=
+      document.documentElement.scrollHeight
+    ) {
+      showLoading();
+    }
+  });
 
 function showLoading() {
   loading.classList.add("show");
