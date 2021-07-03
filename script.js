@@ -19,19 +19,7 @@ window.addEventListener("scroll", () => {
 });
 
 window.addEventListener("touchmove", () => {
-  if (
-    window.pageYOffset + window.innerHeight >=
-    document.documentElement.scrollHeight
-  ) {
-    showLoading();
-  }
-
-  // const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-  // 	// console.log( { scrollTop, scrollHeight, clientHeight });
-  // 	if(clientHeight + scrollTop >= scrollHeight) {
-  // 		showLoading();
-
-  // 	}
+   showLoading();
 });
 
 function showLoading() {
