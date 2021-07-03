@@ -30,7 +30,7 @@ function showLoading() {
 
 async function getPost() {
   const postResponse = await fetch(
-    `https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=MtedJN6g0y3f0nsDVjCHieZLfUsHtYKH`
+    `https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=cB1W4UJLBZFMDocm7MHyZlb4CyoXh2AR`
   );
   const postData = await postResponse.json();
   createCards(postData.results);
