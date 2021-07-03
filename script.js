@@ -19,14 +19,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-window.addEventListener("touchmove", () => {
-    if (
-      window.pageYOffset + window.innerHeight >=
-      document.documentElement.scrollHeight
-    ) {
-      showLoading();
-    }
-  });
 
 function showLoading() {
   loading.classList.add("show");
@@ -34,9 +26,10 @@ function showLoading() {
   getPost();
 }
 
+
 async function getPost() {
   const postResponse = await fetch(
-    `https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=cB1W4UJLBZFMDocm7MHyZlb4CyoXh2AR`
+    `https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=MtedJN6g0y3f0nsDVjCHieZLfUsHtYKH`
   );
   const postData = await postResponse.json();
   createCards(postData.results);
