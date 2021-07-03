@@ -19,15 +19,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-window.addEventListener("touchmove", () => {
-    if (
-      window.pageYOffset + window.innerHeight >=
-      document.documentElement.scrollHeight
-    ) {
-      showLoading();
-    }
-  });
-
 
 function showLoading() {
   loading.classList.add("show");
