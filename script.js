@@ -11,7 +11,7 @@ var state = {
 
 window.addEventListener("scroll", () => {
   if (
-    window.scrollY + window.innerHeight >=
+    window.pageYOffset + window.innerHeight >=
     document.documentElement.scrollHeight
   ) {
     showLoading();
@@ -20,7 +20,7 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("touchmove", () => {
   if (
-    window.scrollY + window.innerHeight >=
+    window.pageYOffset + window.innerHeight >=
     document.documentElement.scrollHeight
   ) {
     showLoading();
